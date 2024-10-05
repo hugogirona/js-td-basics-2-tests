@@ -36,3 +36,23 @@ BONNE CHANCE 😀
 //    INDICE : vous allez avoir besoin de l'opérateur && pour prendre la décision.
 // 5. Changez là aussi les scores pour générer différents gagnants,
 //    en gardant toujours en tête qu'il pourrait y avoir des ex æquos.
+
+
+let moyenneEquipeJohn = (89 + 120 + 103) / 3
+let moyenneEquipeMark = (116 + 94 + 123) / 3
+let moyenneEquipeMarie = (97 + 134 + 105) / 3
+if (moyenneEquipeJohn > moyenneEquipeMark && moyenneEquipeJohn > moyenneEquipeMarie) {
+    console.log(`L'èquipe de John l'emportte avec une moyenne de ${moyenneEquipeJohn} par match. `)
+} else if (moyenneEquipeMark > moyenneEquipeJohn && moyenneEquipeMark > moyenneEquipeMarie) {
+    console.log(`L'èquipe de Mark l'emportte avec une moyenne de ${moyenneEquipeMark} par match. `)
+} else if (moyenneEquipeMarie > moyenneEquipeMark && moyenneEquipeMarie > moyenneEquipeJohn) {
+    console.log(`L'èquipe de Marie l'emportte avec une moyenne de ${moyenneEquipeMarie} par match. `)
+} else if (moyenneEquipeJohn === moyenneEquipeMark && moyenneEquipeJohn > moyenneEquipeMarie) {
+    console.log("Les équipes de John et Mark sont premières ex æquos.")
+}else if (moyenneEquipeJohn === moyenneEquipeMarie && moyenneEquipeJohn > moyenneEquipeMark) {
+    console.log("Les équipes de John et Marie sont premières ex æquos.")
+} else if (moyenneEquipeMarie === moyenneEquipeMark && moyenneEquipeMarie > moyenneEquipeJohn){
+    console.log("Les équipes de Marie et Mark sont premières ex æquos.")
+} else {
+    console.log('Contre toute attente, les trois équipes sont ex æquos')
+}

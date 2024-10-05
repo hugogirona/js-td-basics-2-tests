@@ -27,3 +27,45 @@ N'oubliez pas de tester votre programme avec diverses dates pour vous assurer qu
 
 Vous pouvez utiliser les exemples que vous avez fournis comme point de départ.
 */
+alert("Entrez une date au format suivant: 01/01/1970");
+let day = prompt("Entrez le jour : 01-31");
+if (day > 0 && day <= 31) {
+    let month = prompt("Entrez le mois : 01-12");
+    month = parseInt(month);
+    let year = prompt("Entrez l'année : par exemple 1970");
+
+    console.log(`voici la date entrée : ${day}/${month}/${year}`);
+
+    let maxDays;
+
+    if (month > 0 && month <= 12) {
+        if (month === 1 || month === 3 || month === 5 || month === 7 || month === 8 || month === 10 || month === 12) {
+            maxDays = 31;
+        } else if (month === 2) {
+            if (year % 4 === 0 && year % 100 !== 0 || year % 400 === 0) {
+                maxDays = 29;
+            } else {
+                maxDays = 28;
+            }
+        } else {
+            maxDays = 30;
+        }
+        if (day > 0 && day <= 31) {
+            if (day > maxDays) {
+                console.log(`la date ${day}/${month}/${year}} n'est PAS valide.`);
+            } else {
+                console.log(`la date ${day}/${month}/${year}} est valide.`);
+            }
+        } else {
+            console.log(`${day} n'est pas une valeur possible pour un jour...`);
+        }
+    } else {
+        console.log(`${month} n'est pas une entrée valide. Les mois se comptent de 1 à 12.`)
+    }
+
+} else {
+    console.log(`${day} n'est pas un jour valide`)
+}
+
+
+

@@ -10,3 +10,25 @@
 // Si l'heure actuelle était égale à 23, réinitialisez l'heure à 0 (minuit).
 //     Sinon, incrémentez l'heure actuelle.
 // Affichez la nouvelle heure, les minutes et les secondes dans la console.
+
+
+let hour = 3;
+let minute = 59;
+let second = 59;
+
+second = second++;
+
+if (second >= 59) {
+    second = 0;
+    if (minute >= 59) {
+        minute = 0;
+        if (hour >= 23) {
+            hour = 0;
+        }
+    }
+} else {
+    hour++
+}
+
+console.log(`${hour}:${minute}:${second}`);
+

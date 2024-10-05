@@ -17,3 +17,20 @@
 // Exemple : si le jour actuel est "mardi", le programme devrait afficher "Demain, nous serons mercredi."
 
 // N'oubliez pas de tester votre programme avec divers jours de la semaine.
+
+let today;
+today = prompt('Quel jour sommes nous ?');
+let tomorrow;
+if (today === 'Mardi') {
+    tomorrow = 'Mercredi'
+} else if (today === 'Mercredi') {
+    tomorrow = 'Jeudi'
+} else if (today === 'Jeudi') {
+    tomorrow = 'Vemdredi'
+} else if (today === 'Vemdredi') {
+    tomorrow = 'Samedi'
+} else if (today === 'Samedi') {
+    tomorrow = 'Dimanche'
+} else tomorrow = 'Lundi'
+
+console.log(`Demain nous serons ${tomorrow}.`);
